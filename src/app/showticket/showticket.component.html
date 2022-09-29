@@ -1,0 +1,89 @@
+<div class="container mt-3 mb-3" id="print">
+  <h3 class="mt-5 no-print">Ticket Confirmed</h3>
+  <h4 class="mt-5">Ticket Details</h4>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Ticket ID</th>
+        <th scope="col">Mail</th>
+        <th scope="col">Total Amount</th>
+        <th scope="col">Passenger Count</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope="row mt-3">{{ ticket.ticketId }}</td>
+        <td>{{ ticket.mail }}</td>
+        <td>{{ ticket.total_amt }}</td>
+        <td>{{ ticket.passengerCount }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 class="mt-5">User Details</h4>
+  <table class="table">
+    <thead>
+      <tr>
+         <th scope="col">First Name</th>
+         <th scope="col">Last Name</th>
+         <th scope="col">Phone Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope="row mt-3">{{ ticket.user.fname }}</td>
+        <td>{{ ticket.user.lname }}</td>
+        <td>{{ ticket.user.phoneNo }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 class="mt-5">Bus Details</h4>
+  <table class="table">
+    <thead>
+      <tr>
+         <th scope="col">Bus ID</th>
+         <th scope="col">Bus Name</th>
+         <th scope="col">Bus Type</th>
+         <th scope="col">Duration</th>
+         <th scope="col">Arrival Time</th>
+         <th scope="col">Departure Time</th>
+         <th scope="col">Source</th>
+         <th scope="col">Destination</th>
+         <th scope="col">Date of Travel</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope="row mt-3">{{ ticket.bus.busId }}</td>
+        <td>{{ ticket.bus.busName }}</td>
+        <td>{{ ticket.bus.busType }}</td>
+        <td>{{ ticket.bus.duration }}</td>
+        <td>{{ ticket.bus.arrivalTime }}</td>
+        <td>{{ ticket.bus.depatureTime }}</td>
+        <td>{{ ticket.bus.source }}</td>
+        <td>{{ ticket.bus.destination }}</td>
+        <td>{{ ticket.bus.dateOfTravel }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 class="mt-5">Passengers Details</h4>
+  <table class="table">
+    <thead>
+      <tr>
+         <th scope="col">Passenger Name</th>
+         <th scope="col">Passenger Age</th>
+         <th scope="col">Seat Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of ticket.passengerList">
+        <td scope="row mt-3">{{ p.passengerName }}</td>
+        <td>{{ p.passengerAge }}</td>
+        <td>{{ p.seatNumber }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-primary no-print" (click)="printTicket()">Print Ticket</button>
+</div>

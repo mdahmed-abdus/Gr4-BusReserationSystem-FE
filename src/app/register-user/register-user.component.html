@@ -1,0 +1,99 @@
+<div class="container formContainer">
+  <h1 class="mb-3">Sign Up</h1>
+  <form (submit)="onSubmit()" class="form-group">
+    <label>First Name</label>
+    <input
+      name="firstName"
+      type="text"
+      placeholder="Enter First Name"
+      required
+      class="form-control mb-3"
+      [(ngModel)]="user.fname"
+    />
+    <label>Last Name</label>
+    <input
+      name="lastName"
+      type="text"
+      placeholder="Enter Last Name"
+      required
+      class="form-control mb-3"
+      [(ngModel)]="user.lname"
+    />
+    <label>Email</label>
+    <input
+      name="email"
+      type="email"
+      placeholder="Enter Email"
+      required
+      class="form-control mb-3"
+      [(ngModel)]="user.mail"
+    />
+    <label>Password</label>
+    <input
+      name="password"
+      type="password"
+      placeholder="Enter password"
+      required
+      class="form-control mb-3"
+      [(ngModel)]="user.pwd"
+    />
+    <label>Confirm Password</label>
+    <input
+      name="confirmPassword"
+      type="password"
+      placeholder="Confirm password"
+      required
+      class="form-control mb-3"
+      [(ngModel)]="user.confirmPwd"
+    />
+    <label>Contact Number</label>
+    <input
+      name="contactNumber"
+      type="text"
+      placeholder="Enter Contact Number"
+      required
+      class="form-control mb-3"
+      [(ngModel)]="user.phoneNo"
+    />
+    <label>Address</label>
+    <input
+      name="address"
+      type="text"
+      placeholder="Enter Address"
+      required
+      class="form-control mb-3"
+      [(ngModel)]="user.address"
+    />
+    <!-- <label>Wallet Amount</label>
+    <input
+      name="wallet"
+      type="number"
+      placeholder="Enter Wallet Amount"
+      required
+      class="form-control mb-3"
+      [(ngModel)]="user.wallet"
+    /> -->
+    <label>Date of Birth</label>
+    <input
+      name="dob"
+      type="text"
+      placeholder="Enter DOB (YYYY-MM-DD)"
+      required
+      class="form-control mb-3"
+      [(ngModel)]="user.dob"
+    />
+    <label>Gender</label>
+    <input
+      name="gender"
+      type="text"
+      placeholder="Enter Gender"
+      required
+      class="form-control mb-3"
+      [(ngModel)]="user.gender"
+    />
+    <button type="submit" class="btn btn-primary me-3">Register</button>
+    <button type="button" class="btn btn-outline-primary" (click)="onCancel()">
+      Cancel
+    </button>
+  </form>
+</div>

@@ -1,0 +1,110 @@
+<div class="container">
+  <div class="container">
+    <h1>Add New Bus</h1>
+    <form (submit)="onSubmit()" class="form-group">
+      <div class="row mb-3 mt-3">
+        <div class="col">
+          <label>Bus Name</label>
+          <input
+            name="busName"
+            type="text"
+            class="form-control"
+            [(ngModel)]="bus.busName"
+          />
+        </div>
+        <div class="col">
+          <label>Number of Seats</label>
+          <input
+            name="totalNumberOfSeats"
+            type="number"
+            class="form-control"
+            [(ngModel)]="bus.totalNumberOfSeats"
+          />
+        </div>
+      </div>
+      <div class="row mb-3 mt-3">
+        <div class="col">
+          <label>Bus Type</label>
+          <input
+            name="busType"
+            type="text"
+            class="form-control"
+            [(ngModel)]="bus.busType"
+          />
+        </div>
+        <div class="col">
+          <label>Duration</label>
+          <input
+            name="duration"
+            type="text"
+            class="form-control"
+            [(ngModel)]="bus.duration"
+          />
+        </div>
+      </div>
+      <div class="row mb-3 mt-3">
+        <div class="col">
+          <label>Arrival Time</label>
+          <input
+            name="arrivalTimeHours"
+            type="time"
+            class="form-control"
+            [(ngModel)]="bus.arrivalTime"
+          />
+        </div>
+        <div class="col">
+          <label>Departure Time</label>
+          <input
+            name="departureTimeHours"
+            type="time"
+            class="form-control"
+            [(ngModel)]="bus.depatureTime"
+          />
+        </div>
+      </div>
+      <div class="row mb-3 mt-3">
+        <div class="col">
+          <label>Source</label>
+          <input
+            name="source"
+            type="text"
+            class="form-control"
+            [(ngModel)]="bus.source"
+          />
+        </div>
+        <div class="col">
+          <label>Destination</label>
+          <input
+            name="destination"
+            type="text"
+            class="form-control"
+            [(ngModel)]="bus.destination"
+          />
+        </div>
+      </div>
+      <div class="row mb-3 mt-3">
+        <div class="col">
+          <label>Date of Travel</label>
+          <input
+            name="dateOfTravel"
+            type="date"
+            class="form-control"
+            [(ngModel)]="bus.dateOfTravel"
+          />
+        </div>
+        <div class="col">
+          <label>Fare</label>
+          <input
+            name="fare"
+            type="number"
+            class="form-control"
+            [(ngModel)]="bus.fare"
+          />
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary me-3">Add Bus</button>
+      <a href="/dashboard" class="btn btn-outline-primary">Cancel</a>
+    </form>
+  </div>
+  
+</div>

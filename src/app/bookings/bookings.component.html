@@ -1,0 +1,39 @@
+<div>
+  <div *ngIf="tickets?.length === 0; else showTable">
+    <p>You have not booked any tickets</p>
+    <a href="/" class="btn btn-primary">Book new Ticket</a>
+  </div>
+  <ng-template #showTable>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">User Id</th>
+        <th scope="col">Ticket Id</th>
+        <th scope="col">Bus Id</th>
+        <th scope="col">Bus Name</th>
+        <th scope="col">Passengers</th>
+        <th scope="col">Total Amount</th>
+        <th scope="col">Source</th>
+        <th scope="col">Destination</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ticket of tickets">
+        <td scope="row mt-3">{{ ticket.user.user_Id }}</td>
+        <td>{{ ticket.ticketId }}</td>
+        <td>{{ ticket.bus.busId }}</td>
+        <td>{{ ticket.bus.busName }}</td>
+        <td>{{ ticket.passengerCount }}</td>
+        <td>{{ ticket.total_amt }}</td>
+        <td>{{ ticket.bus.source}}</td>
+        <td>{{ ticket.bus.destination}}</td>
+        <td>
+          <a href="/tickets/{{ticket.ticketId}}" class="btn btn-primary"
+            >View More</a
+          >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ng-template>
+</div>

@@ -1,0 +1,39 @@
+<div>
+  <a href="/newbus" class="btn btn-primary mt-3 mb-3">Add New Bus</a>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Bus Id</th>
+        <th scope="col">Bus Name</th>
+        <th scope="col">Bus Type</th>
+        <th scope="col">Date</th>
+        <th scope="col">From</th>
+        <th scope="col">To</th>
+        <th scope="col">Departure Time</th>
+        <th scope="col">Arrival Time</th>
+        <th scope="col">Price</th>
+        <th scope="col">Duration</th>
+        <th scope="col">Select Bus</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bus of busses">
+        <td scope="row mt-3">{{ bus.busId }}</td>
+        <td>{{ bus.busName }}</td>
+        <td>{{ bus.busType }}</td>
+        <td>{{ bus.dateOfTravel }}</td>
+        <td>{{ bus.source }}</td>
+        <td>{{ bus.destination }}</td>
+        <td>{{ bus.depatureTime }}</td>
+        <td>{{ bus.arrivalTime }}</td>
+        <td>{{ bus.fare }}</td>
+        <td>{{ bus.duration }}</td>
+        <td>
+          <a href="/admin/showbuses/{{ bus.busId }}" class="btn btn-primary"
+            >Manage</a
+          >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

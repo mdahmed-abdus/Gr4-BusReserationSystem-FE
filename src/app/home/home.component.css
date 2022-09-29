@@ -1,0 +1,72 @@
+body
+{
+  background-color: darksalmon;
+  
+}
+#logo
+{
+  width: 70px;
+  height: 70px;
+}
+#hb
+{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+#sl
+{
+  padding-right: 0px;
+}
+#frm
+{
+  padding-right: 0px;
+}
+#selectrestaurent
+{
+  padding: 200px 100px 400px 700px;
+}
+#success_message{ display: none;}
+#card2
+{
+    margin-left: 400px;
+    margin-top: 200px;
+    margin-right: 300px;
+}
+#link
+{
+  margin-left: 20px;
+  padding-left: 20px;
+}
+#hm
+{
+  padding-right: 20px;
+}
+#dis
+{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#rms
+{
+  padding-left: 300px;
+}
+#usrtbls
+{
+  margin-left: 20px;
+}
+#card1
+{
+   margin-left: 250px;
+   margin-right: 250px;
+}
+.txtDecNone {
+  text-decoration: none;
+}
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}

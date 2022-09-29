@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <h1>Hello {{ user.fname }}</h1>
+  </div>
+  <div class="row flex-grow-sm-1 flex-grow-0">
+    <aside
+      class="col-12 col-md-3 flex-grow-sm-1 flex-shrink-1 flex-grow-0 sticky-top pb-sm-0 pb-3"
+    >
+      <div class="border p-1 sticky-top">
+        <ul
+          class="nav nav-pills flex-sm-column flex-row mb-auto justify-content-between text-truncate"
+        >
+          <li *ngFor="let s of sidebarList">
+            <a
+              href="/dashboard#{{ s.link }}"
+              class="nav-link px-2 text-truncate"
+              (click)="onClick(s.link)"
+            >
+              <span>{{ s.title }}</span>
+            </a>
+          </li>
+          <ng-container *ngIf="user.userType === 'admin'">
+            <li *ngFor="let s of adminSidebarList">
+              <a
+                href="/dashboard#{{ s.link }}"
+                class="nav-link px-2 text-truncate"
+                (click)="onClick(s.link)"
+              >
+                <span>{{ s.title }}</span>
+              </a>
+            </li>
+          </ng-container>
+        </ul>
+      </div>
+    </aside>
+    <main class="col-12 col-md-9 overflow-auto">
+      <!-- <div class="contentWrap border p-3 active" id="dashboard">
+        <h2>My Dashboard</h2>
+        <app-sub-dashboard></app-sub-dashboard>
+      </div> -->
+      <div class="contentWrap border p-3 active" id="bookings">
+        <h2>Bookings</h2>
+        <app-bookings></app-bookings>
+      </div>
+      <div class="contentWrap border p-3" id="profile">
+        <h2>Profile</h2>
+        <app-user-profile></app-user-profile>
+      </div>
+      <div class="contentWrap border p-3" id="change-password">
+        <h2>Change Password</h2>
+        <app-change-password></app-change-password>
+      </div>
+      <!-- <div class="contentWrap border p-3" id="wallet">
+        <h2>Wallet</h2>
+        <app-wallet></app-wallet>
+      </div> -->
+      <div class="contentWrap border p-3" id="manage-busses">
+        <h2>Manage Busses</h2>
+        <app-manage-busses></app-manage-busses>
+      </div>
+    </main>
+  </div>
+</div>

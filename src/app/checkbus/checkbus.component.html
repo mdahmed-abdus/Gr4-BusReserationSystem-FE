@@ -1,0 +1,45 @@
+<form (submit)="onSubmit()" class="container mt-5">
+    <fieldset>
+        <h1>Search for Bus</h1>
+        <div class="container p-2 bg-white mt-3" >
+            <div class="row justify-content-center mb-4">
+                <div class="col-4">
+                    <label class="mb-2" style="font-weight: 800;font-size: large;">Select Source
+                        </label>
+                    <select id="distance" name="distance" [(ngModel)]="source_dest.source" class="form-control selectpicker" required>
+                        <option value="">From</option>
+                        <option>Hyderabad</option>
+                        <option>Delhi</option>
+                        <option>Banglore</option>
+                        <option>Kolkata</option>
+                        <option>Chennai</option>
+                        <option>Mumbai</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label class="mb-2" style="font-weight: 800;font-size: large;">Select Destination</label>
+                    <select id="selectrest" name="restaurent"  [(ngModel)]="source_dest.destination" class="form-control selectpicker">
+                        <option value="">To</option>
+                        <option>Hyderabad</option>
+                        <option>Delhi</option>
+                        <option>Banglore</option>
+                        <option>Kolkata</option>
+                        <option>Chennai</option>
+                        <option>Mumbai</option>
+                    </select>
+                </div>
+               
+                <div class="col-4">
+                    <label class="mb-2" style="font-weight: 800;font-size: large;">Select Date</label>
+                    <input id="date" name="date" [(ngModel)]="source_dest.date" placeholder="DD/MM/YYYY" class="form-control" type="date">
+                    <small id="dateerror"></small>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-4">
+                <div class="col-3 offset-2">
+                    <button type="submit" class="btn btn-primary btn-block">Proceed</button>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</form>
